@@ -16,7 +16,7 @@ const app = () => {
       <Flex
         bgGradient="linear(to-r, green.200, pink.500)"
         w="100%"
-        h="100vh"
+        minH="100vh"
       ></Flex>
       {/*  View Two */}
       <Flex my="2rem" w="100%" justifyContent="space-around">
@@ -26,7 +26,7 @@ const app = () => {
         {featureCard}
       </Flex>
       {/*  View Three */}
-      <Flex w="100%" alignItems="center" h="100vh">
+      <Flex w="100%" alignItems="center" minH="100vh">
         <Spacer />
 
         <Flex mx="1rem" direction="column" w="50%">
@@ -39,14 +39,14 @@ const app = () => {
         </Flex>
       </Flex>
       {/*  View Four */}
-      <Flex bg="gray.800" p="1rem" w="100%" alignItems="center" h="100vh">
+      <Flex bg="gray.800" p="1rem" w="100%" alignItems="center" minH="100vh">
         <Flex alignItems="center" w="50%" direction="column">
           {featuresCardLarge}
         </Flex>
         <Spacer />
       </Flex>
       {/*  View Five */}
-      <Flex bg="gray.900" p="1rem" w="100%" alignItems="center" h="100vh">
+      <Flex bg="gray.900" p="1rem" w="100%" alignItems="center" minH="100vh">
         <Spacer />
         <Flex alignItems="center" w="50%" direction="column">
           {featuresCardLarge}
@@ -59,7 +59,7 @@ const app = () => {
         w="100%"
         alignItems="center"
         justifyContent="center"
-        h="100vh"
+        minH="100vh"
       >
         <Faq />
       </Flex>

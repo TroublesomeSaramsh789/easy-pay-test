@@ -1,11 +1,11 @@
 import { PhoneIcon, EmailIcon, TriangleDownIcon } from "@chakra-ui/icons";
 
-import { Flex, Text, Box, Input, Button } from "@chakra-ui/react";
+import { Flex, Text, Box, Input, Button, Spacer } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <Flex color="white" p="2rem" w="100%">
-      <Flex direction="column" w="40%">
+    <Flex color="white" p="3rem" w="100%">
+      <Flex direction="column" w="40%" maxW="400px">
         <Text fontWeight="semibold" color="white" fontSize="3xl">
           <Box display="inline" color="green.400">
             Easy
@@ -18,10 +18,18 @@ const Footer = () => {
           nesciunt cupiditate ipsam necessitatibus fugiat! Eveniet, quibusdam?
         </Text>
       </Flex>
-      <Flex justifyContent="space-between" w="60%">
-        <Flex direction="column" w="58%">
-          <Text fontWeight="bold"> STAY CONNECTED</Text>
-          <Input bg="gray.100" w="200px" placeholder="Enter Your Email" />
+      <Spacer />
+      <Flex maxW="700px">
+        <Flex direction="column" mx="2rem">
+          <Text mb="0.5rem" fontWeight="bold">
+            STAY CONNECTED
+          </Text>
+          <Input
+            color="black"
+            bg="gray.200"
+            w="200px"
+            placeholder="Enter Your Email"
+          />
           <Text mt="2rem">
             <TriangleDownIcon mr="0.5rem" /> Baneshwor, Kathmandu, Nepal
           </Text>
@@ -33,7 +41,7 @@ const Footer = () => {
             <EmailIcon mr="0.5rem" /> test@mail.com
           </Text>
         </Flex>
-        <Flex direction="column" w="40%">
+        <Flex direction="column">
           <Text fontWeight="bold"> CONNECT WITH US</Text>
           <Flex my="1.5rem" w="100%" justifyContent="space-around">
             <EmailIcon />
@@ -43,7 +51,12 @@ const Footer = () => {
             <PhoneIcon />
           </Flex>
           <Text fontWeight="bold"> SOON ON:</Text>
-          <Flex w="100%" direction="column" justifyContent="space-around">
+          <Flex
+            maxW="250px"
+            w="100%"
+            direction="column"
+            justifyContent="space-around"
+          >
             <Button my="0.25rem" colorScheme="whatsapp">
               Google Play
             </Button>{" "}
