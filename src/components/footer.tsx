@@ -33,8 +33,9 @@ const Footer = () => {
             STAY CONNECTED
           </Text>
           <Input
+            borderRadius="0.2rem"
             color="black"
-            bg="gray.200"
+            bg="gray.100"
             w="200px"
             placeholder="Enter Your Email"
           />
