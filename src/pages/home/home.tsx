@@ -18,6 +18,13 @@ import { Faq } from "../../components/faq";
 import homebg from "../../assets/images/home-bg.png";
 // @ts-ignore
 import homeCat from "../../assets/images/home-cat.png";
+// @ts-ignore
+import homeOne from "../../assets/images/1.png";
+// @ts-ignore
+import homeTwo from "../../assets/images/2.png";
+// @ts-ignore
+import homeThree from "../../assets/images/3.png";
+
 import DefaultButton from "../../components/defaultButton";
 
 const Home = () => {
@@ -67,6 +74,8 @@ const Home = () => {
       {/*  View Three */}
       <Flex w="100%" alignItems="center" minH="100vh">
         <Spacer />
+        <Image objectFit="cover" w="auto" height="75vh" src={homeOne} />
+        <Spacer />
 
         <Flex mx="1rem" direction="column" w="50%">
           {featuresCardLarge}
@@ -83,9 +92,13 @@ const Home = () => {
           {featuresCardLarge}
         </Flex>
         <Spacer />
+        <Image objectFit="cover" w="auto" height="70vh" src={homeTwo} />
+        <Spacer />
       </Flex>
       {/*  View Five */}
       <Flex p="1rem" w="100%" alignItems="center" minH="100vh">
+        <Spacer />
+        <Image objectFit="cover" w="auto" height="70vh" src={homeThree} />
         <Spacer />
         <Flex alignItems="center" w="50%" direction="column">
           {featuresCardLarge}
