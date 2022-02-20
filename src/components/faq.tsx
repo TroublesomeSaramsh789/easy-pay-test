@@ -20,7 +20,7 @@ export const Faq = () => {
       allowMultiple
     >
       <AccordionItem my="0.5rem" border="none">
-        <Text p="0.4rem" bg="gray.700" border="none">
+        <Text p="0.4rem" bg="#191A1A" border="none">
           <AccordionButton>
             <Box flex="1" textAlign="left">
               Section 1 title
@@ -37,7 +37,7 @@ export const Faq = () => {
       </AccordionItem>
 
       <AccordionItem my="0.5rem" border="none">
-        <Text p="0.4rem" bg="gray.700" border="none">
+        <Text p="0.4rem" bg="#191A1A" border="none">
           <AccordionButton>
             <Box flex="1" textAlign="left">
               Section 2 title
@@ -53,7 +53,7 @@ export const Faq = () => {
         </AccordionPanel>
       </AccordionItem>
       <AccordionItem my="0.5rem" border="none">
-        <Text p="0.4rem" bg="gray.700" border="none">
+        <Text p="0.4rem" bg="#191A1A" border="none">
           <AccordionButton>
             <Box flex="1" textAlign="left">
               Section 3 title
@@ -69,7 +69,7 @@ export const Faq = () => {
         </AccordionPanel>
       </AccordionItem>
       <AccordionItem my="0.5rem" border="none">
-        <Text p="0.4rem" bg="gray.700" border="none">
+        <Text p="0.4rem" bg="#191A1A" border="none">
           <AccordionButton>
             <Box flex="1" textAlign="left">
               Section 4 title

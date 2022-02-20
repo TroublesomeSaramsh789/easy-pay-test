@@ -1,91 +1,33 @@
 import React from "react";
 import { Box, Button, Flex, Spacer } from "@chakra-ui/react";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
+
 import Navbar from "./components/navbar";
-import FeaturesCard from "./components/featuresCard";
-import FeaturesCardTwo from "./components/featuresCardv2";
-import FeaturesCardLarge from "./components/featuresCardLarge";
-import { Faq } from "./components/faq";
 import Footer from "./components/footer";
+import Home from "./pages/home/home";
+import { Route, Routes } from "react-router-dom";
+import Dashboard from "./pages/dashboard/dashboard";
+import SendMoney from "./pages/dashboard/sendMoney";
+import WithdrawMoney from "./pages/dashboard/withdrawMoney";
+import Transaction from "./pages/dashboard/transaction";
+import Settings from "./pages/dashboard/settings";
 
 const app = () => {
   return (
-    <Box bg="gray.900" w="100%" h="100%">
+    <Flex direction="column" color="white" bg="#0F1010" w="100%">
       <Navbar />
-      {/* View One */}
-      <Flex
-        bgGradient="linear(to-r, green.200, pink.500)"
-        w="100%"
-        minH="100vh"
-      ></Flex>
-      {/*  View Two */}
-      <Flex my="2rem" w="100%" justifyContent="space-around">
-        {featureCard}
-        {featureCard}
-        {featureCard}
-        {featureCard}
-      </Flex>
-      {/*  View Three */}
-      <Flex w="100%" alignItems="center" minH="100vh">
-        <Spacer />
-
-        <Flex mx="1rem" direction="column" w="50%">
-          {featuresCardLarge}
-
-          <Flex my="1rem" w="80%" justifyContent="space-between">
-            {featureCardTwo}
-            {featureCardTwo}
-          </Flex>
-        </Flex>
-      </Flex>
-      {/*  View Four */}
-      <Flex bg="gray.800" p="1rem" w="100%" alignItems="center" minH="100vh">
-        <Flex alignItems="center" w="50%" direction="column">
-          {featuresCardLarge}
-        </Flex>
-        <Spacer />
-      </Flex>
-      {/*  View Five */}
-      <Flex bg="gray.900" p="1rem" w="100%" alignItems="center" minH="100vh">
-        <Spacer />
-        <Flex alignItems="center" w="50%" direction="column">
-          {featuresCardLarge}
-        </Flex>
-      </Flex>
-      {/*  View Six */}
-      <Flex
-        bg="gray.800"
-        p="1rem"
-        w="100%"
-        alignItems="center"
-        justifyContent="center"
-        minH="100vh"
-      >
-        <Faq />
-      </Flex>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login/">
+          <Route path="/login/" element={<Dashboard />} />
+          <Route path="/login/send-money" element={<SendMoney />} />
+          <Route path="/login/withdraw-money" element={<WithdrawMoney />} />
+          <Route path="/login/transaction" element={<Transaction />} />
+          <Route path="/login/settings" element={<Settings />} />
+        </Route>
+      </Routes>
       <Footer />
-    </Box>
+    </Flex>
   );
 };
 
 export default app;
-
-const featureCard = (
-  <FeaturesCard
-    icon={<ArrowForwardIcon color="white" />}
-    title="Load Money"
-    discription="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, maxime!"
-  />
-);
-const featureCardTwo = (
-  <FeaturesCardTwo
-    title="Lorem ipsum"
-    discription="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, maxime!"
-  />
-);
-const featuresCardLarge = (
-  <FeaturesCardLarge
-    title="Lorem ipsum"
-    discription="        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum corporis officia, perspiciatis quia distinctio quidem pariatur autem iure iste a assumenda consequatur rem modi fugit?"
-  />
-);

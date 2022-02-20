@@ -1,17 +1,25 @@
 import { PhoneIcon, EmailIcon, TriangleDownIcon } from "@chakra-ui/icons";
 
-import { Flex, Text, Box, Input, Button, Spacer } from "@chakra-ui/react";
+import {
+  Flex,
+  Text,
+  Box,
+  Input,
+  Button,
+  Spacer,
+  Heading,
+} from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <Flex color="white" p="3rem" w="100%">
+    <Flex bg="#191A1A" color="white" p="3rem" w="100%">
       <Flex direction="column" w="40%" maxW="400px">
-        <Text fontWeight="semibold" color="white" fontSize="3xl">
-          <Box display="inline" color="green.400">
+        <Heading color="white">
+          <Heading as="span" display="inline" color="#A1FE6B">
             Easy
-          </Box>
+          </Heading>
           PAY
-        </Text>
+        </Heading>
         <Text color="gray.200">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum minima
           officiis magni temporibus deleniti accusantium enim quis, voluptas

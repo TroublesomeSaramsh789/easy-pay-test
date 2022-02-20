@@ -1,13 +1,18 @@
 import { Stack, Text, Button } from "@chakra-ui/react";
 import React from "react";
 
-const featuresCardLarge = (props) => {
-  console.log("running");
+const featuresCardLarge = (props: any) => {
   return (
     <Stack maxW="500px" w={props.width ? props.width : "100%"}>
-      <Text fontSize="sm" fontWeight="bold" color="green.400" lineHeight="1.5">
-        - Lorem Lorem{" "}
+      <Text fontWeight="semibold" color="#A1FE6B">
+        - Lorem Ipsum
       </Text>
+      <Text
+        fontSize="sm"
+        fontWeight="bold"
+        color="green.400"
+        lineHeight="1.5"
+      ></Text>
       <Text color="white" fontWeight="bold" fontSize="3xl">
         {props.title}
       </Text>
@@ -15,7 +20,7 @@ const featuresCardLarge = (props) => {
         {props.discription}
       </Text>
       <Stack py="1.5rem">
-        <Button color="black" colorScheme="green" w="240px">
+        <Button color="black" bg="#A1FE6B" w="240px">
           Get Started Now
         </Button>
       </Stack>
